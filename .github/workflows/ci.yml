@@ -16,7 +16,7 @@ jobs:
         run: |
           sudo dpkg --add-architecture aarch64
           sudo apt-get update
-          sudo apt-get install libc6:aarch64
+          sudo apt-get install libc6:arm64
       - name: Set up Python
         uses: actions/setup-python@v5
         with:

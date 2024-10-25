@@ -14,9 +14,7 @@ jobs:
           platforms: all
       - name: Set up emulated deps
         run: |
-          sudo dpkg --add-architecture arm64
-          # sudo apt-get update
-          sudo apt-get install libc6:arm64
+          sudo sudo apt install qemu-user qemu-user-static gcc-aarch64-linux-gnu binutils-aarch64-linux-gnu binutils-aarch64-linux-gnu-dbg build-essential
       - name: Set up Python
         uses: actions/setup-python@v5
         with:

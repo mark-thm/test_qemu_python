@@ -13,7 +13,7 @@ jobs:
         with:
           platforms: all
       - name: Set up emulated deps
-        run: sudo dpkg --add-architecture arm64
+        run: dpkg --add-architecture arm64
       - name: Set up Python
         uses: actions/setup-python@v5
         with:

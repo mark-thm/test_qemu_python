@@ -13,7 +13,10 @@ jobs:
         with:
           platforms: all
       - name: Set up emulated deps
-        run: dpkg --add-architecture arm64
+        run: |
+          sudo dpkg --add-architecture arm64
+          sudo apt update
+          sudo apt install libc6:arm64
       - name: Set up Python
         uses: actions/setup-python@v5
         with:

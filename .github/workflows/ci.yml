@@ -11,7 +11,7 @@ jobs:
         if: runner.os == 'Linux'
         uses: docker/setup-qemu-action@v3
         with:
-          platforms: arm64
+          platforms: all
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
